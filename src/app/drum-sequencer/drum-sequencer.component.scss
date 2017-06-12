@@ -1,0 +1,17 @@
+.beats li {
+  display: inline-block;
+}
+
+.beats li button {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0.2em;
+}
+.beats li:first-child {
+  margin-left: 0 !important;
+}
+
+.beats li:nth-child(4n+1) {
+  margin-left: 1em;
+}
+

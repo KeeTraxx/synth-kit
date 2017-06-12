@@ -1,3 +1,21 @@
-<p>
-  drum-sequencer works!
-</p>
+<div>
+  Beats per measure:
+  <select [(ngModel)]="beats" (ngModelChange)="beatsArray.length = beats">
+    <option>8</option>
+    <option>16</option>
+    <option>32</option>
+  </select>
+</div>
+
+<div>
+  HiHat
+  <ul class="beats">
+    <li *ngFor="let beat of beatsArray; let i = index">
+      <button (click)="toggle(i, 'hihat')">
+        <i class="fa fa-circle" style="color: red;" [style.opacity]="beatsArray[i]?.hihat || 0"></i>
+      </button>
+    </li>
+  </ul>
+</div>
+
+{{beatsArray | json}}

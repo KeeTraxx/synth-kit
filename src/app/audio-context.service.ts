@@ -5,9 +5,13 @@ export class AudioContextService {
 
   private audioContext:AudioContext;
 
-  constructor() { 
+  constructor() {
     console.log('audiocontexxler');
     this.audioContext = new AudioContext();
+  }
+
+  public getContext():AudioContext {
+    return this.audioContext;
   }
 
 }
